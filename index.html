@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steuerrechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section class="sec1">
+        <p>Was soll berechnet werden?</p>
+        <div>
+            <input checked type="radio" value="radio1" name="ZZ" id="aufschlag" onchange="change(value)">
+            <label for="aufschlag">Mehrwertsteuer aufschlagen (Netto zu Brutto</label>
+        </div>
+        <div>
+            <input type="radio" value="radio2" name="ZZ" id="abziehen" onchange="change(value)">
+            <label for="abziehen">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+        </div>
+    </section>
+    <section class="sec2">
+        <p>Mehrwertsteuersatz</p>
+        <div>
+            <input checked type="radio" name="YY" onchange="prozent(value)" value="satz1" id="satz1">
+            <label for="satz1">19 %</label>
+        </div>
+        <div>
+            <input type="radio" name="YY" value="satz2" onchange="prozent(value)" id="satz2">
+            <label for="satz2">7 %</label>
+        </div>
+        <div>
+            <label for="betrag" id="outputNB"></label>
+            <input id="betrag" type="number">
+        </div>
+        <button type="button" onclick="berechnen()">BERECHNEN</button>
+    </section>
+    <section class="sec3">
+        <h1>Ergebnis</h1>
+        <div>
+            <h2>Mehrwertsteuerbetrag</h2>
+            <p id="output1"></p>
+        </div>
+        <div>
+            <h2 id="BN"></h2>
+            <p id="output2"></p>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
